@@ -1,6 +1,11 @@
-﻿namespace PracticaMVC.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace PracticaMVC.Models
 {
-    public class equiposDbContext
+    public class equiposDbContext: DbContext
     {
+        public equiposDbContext(DbContextOptions<equiposDbContext> options): base(options)
+        {
+        }
     }
 }
